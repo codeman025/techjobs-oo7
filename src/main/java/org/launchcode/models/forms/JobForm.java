@@ -27,6 +27,18 @@ public class JobForm {
         with correct validation attributes and display names.
         Don't forget to add getters and setters
      */
+//allow form display AND form submission, cheryl already put in the work for the name data, copy
+    //instead of employer use employerId
+    //mimic the code in place for employerID and the employers list for the other job field types.
+
+    @NotNull
+    private int locationId;
+
+    @NotNull
+    private int coreCompetenciesId;
+
+    @NotNull
+    private int positionTypeId;
 
     private ArrayList<Employer> employers;
     private ArrayList<Location> locations;
@@ -42,6 +54,9 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
 
     }
 
@@ -59,6 +74,30 @@ public class JobForm {
 
     public void setEmployerId(int employerId) {
         this.employerId = employerId;
+    }
+
+    public int getLocationId() {
+        return locationId;
+    }
+
+    public void setLocationId(int locationId) {
+        this.locationId = locationId;
+    }
+
+    public int getCoreCompetenciesId() {
+        return coreCompetenciesId;
+    }
+
+    public void setCoreCompetenciesId(int coreCompetenciesId) {
+        this.coreCompetenciesId = coreCompetenciesId;
+    }
+
+    public int getPositionTypeId() {
+        return positionTypeId;
+    }
+
+    public void setPositionTypeId(int positionTypeId) {
+        this.positionTypeId = positionTypeId;
     }
 
     public ArrayList<Employer> getEmployers() {

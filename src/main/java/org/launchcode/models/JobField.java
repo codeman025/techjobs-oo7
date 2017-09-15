@@ -34,7 +34,14 @@ public class JobField {
     public String toString() {
         return value;
     }
-
+//set up to return the value field BECAUSE using this object in a template, or in another string context
+    //like System.out.println will print the value
+    //System.out.println(job.getEmployer) prints the name of the Employer suprise suprise
+    //we do this because we can HAVE A SINGLE JOB type, such as web developer, which we don't need to
+    //declare every single job, we call the PositionType object
+    //This allows data to be updated more easily, like if seattle was renamed to Tacoma we woulnd only have
+    //to change the Location object once instead of changing every job in seattle
+    //
     public int getId() {
         return id;
     }

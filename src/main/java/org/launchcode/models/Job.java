@@ -14,10 +14,11 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
-    public Job() {
+    public Job() {//when a new job is created it is auto incremented so EACH JOB has its own unique id
         id = nextId;
         nextId++;
     }
+// if you have a job instance use String employerName =job.getEmployer().getValue();
 
     public Job(String aName, Employer aEmployer, Location aLocation,
                PositionType aPositionType, CoreCompetency aSkill) {
